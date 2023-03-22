@@ -18,12 +18,10 @@
                 <h1> {{ titolo }} </h1>
             </div>
             <div class="container">
-                <form>
                     <input @keyup.enter="sendTask" v-model="newTask" type="text" class="form-control" name="todo" placeholder="Inserisci Task">
-                </form>
                 <ul>
                     <li v-for="todo in todos" :key="todo">
-                        {{ todo }}
+                        {{ todo.text }}
                     </li>
                 </ul>
             </div>
